@@ -7,6 +7,7 @@ import { PackagesComponent } from './pages/packages/packages.component';
 import { ClientComponent } from './pages/client/client.component';
 import { UsersComponent } from './pages/users/users.component';
 import { PackageActivationComponent } from './pages/package-activation/package-activation.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,13 +15,10 @@ import { PackageActivationComponent } from './pages/package-activation/package-a
     PackagesComponent,
     ClientComponent,
     UsersComponent,
-    PackageActivationComponent
+    PackageActivationComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
